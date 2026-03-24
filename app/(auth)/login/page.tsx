@@ -1,11 +1,10 @@
 import { LoginForm } from "@/features/auth/components/login-form";
 import Image from "next/image";
-import { useTheme } from "@/hooks/useTheme";
 
 export default function LoginPage() {
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm flex justify-center">
+    <div className="flex flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
+      <div className="flex justify-center w-full max-w-sm">
         <Image
           src="/logo/Logo.png"
           alt="Logo"
@@ -15,13 +14,14 @@ export default function LoginPage() {
           loading="eager"
         />
       </div>
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">
+
+      <div className="w-full max-w-sm text-center mt-10">
+        <h2 className="text-2xl/9 font-bold tracking-tight text-white">
           Faça login na sua conta.
         </h2>
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="w-full max-w-sm mt-10">
         <LoginForm />
       </div>
     </div>
